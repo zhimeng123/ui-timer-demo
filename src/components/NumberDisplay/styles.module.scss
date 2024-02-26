@@ -1,0 +1,42 @@
+.NumberDisplay {
+  display: flex;
+  align-items: center;
+  color: white;
+
+  user-select: none; // 不让被选中
+  font-family: "smiley sans";
+}
+
+.digitWrapper {
+  width: 24px;
+  height: 32px;
+  font-size: 24px;
+  line-height: 32px;
+  background: black;
+  position: relative;
+  border-radius: 6px;
+  margin-right: 12px;
+  text-align: center;
+  overflow: hidden; // 隐藏多余的
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.digitList {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+
+  // 竖起来
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transition: transform 300ms;
+}
+
+.digit {}
